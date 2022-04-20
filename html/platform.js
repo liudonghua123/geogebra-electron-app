@@ -3,7 +3,7 @@ analyticsVersion = 'V'+latestVersion.replace(/^5/,"6")+"-offline";
 startDelay = 500;
 appOnline = false;
 
-
+window.ipc = { send: () => {} }
 
 //https://gist.github.com/paulcbetts/2d2de55d137a1cf9d1ac
 function installAnalytics(gaID){
