@@ -3,7 +3,7 @@ analyticsVersion = 'V'+latestVersion.replace(/^5/,"6")+"-offline";
 startDelay = 500;
 appOnline = false;
 
-window.ipc = { send: () => {} }
+// window.ipc = { send: () => {} }
 
 //https://gist.github.com/paulcbetts/2d2de55d137a1cf9d1ac
 function installAnalytics(gaID){
@@ -23,15 +23,15 @@ function installAnalytics(gaID){
 }
 
 function ggbExamMode(exam) {
-	window.ipc.send("exam", exam);
+	// window.ipc.send("exam", exam);
 }
 
 function setUnsavedMessage(message, save, noSave, cancel){
-	window.ipc.send('unsaved', JSON.stringify([message,save,noSave,cancel]));
+	// window.ipc.send('unsaved', JSON.stringify([message,save,noSave,cancel]));
 }
 
 console.log = function(message) {
-        window.ipc.send('log', message);
+        // window.ipc.send('log', message);
 }
 
 const defaultOpen = window.open;
@@ -41,7 +41,7 @@ window.open = function(url, features) {
 		return defaultOpen(url, features);
 		console.log("Opening URL " + url + " inside electron app");
 	} else {
-		window.ipc.send('openUrl', url);
+		// window.ipc.send('openUrl', url);
 		console.log("Opening URL " + url + " in external OS browser");
 	}
 }
