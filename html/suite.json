@@ -1,0 +1,14 @@
+{
+  "name": "GeoGebra Calculator Suite",
+  "short_name": "GeoGebra Calculator",
+  "prefer_related_applications": true,
+  "related_applications": [
+    {
+      "platform": "play",
+      "id": "org.geogebra.android.calculator.suite"
+    }
+  ],
+
+  "start_url": "/",
+  "display": "standalone"
+}
